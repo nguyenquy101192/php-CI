@@ -1,0 +1,53 @@
+#slider-main-container{
+	width:600px;
+	margin: 0 auto;
+	position: relative;
+	display: block;
+}
+
+#slider-sort {
+	display: inline-block;
+	position: relative;
+	width:100%;
+	height: 550px;
+	padding: 10px;
+}
+
+#slider-sort-container {
+	display: block;
+	position: relative;
+	width: 600px;
+	float:left;
+	padding:0px;
+	margin:0px auto;
+}
+
+.slider-item{
+	margin: 5px auto;
+	padding:5px 10px;
+	position: relative;
+	width: 500px;
+	height: 60px;
+	display: block;
+	color:#333;
+	text-decoration: none;
+	font-weight: bold;
+	border:1px solid #ccc;
+	background:#fafafa;
+	border-radius: 3px;
+	cursor: default;
+	line-height: 60px;
+	vertical-align: middle;
+}
+.slider-item > p {
+	display:inline-block;
+	vertical-align: middle;
+	position: absolute;
+	margin-left: 10px;
+}
+
+.slider-delete {
+	display:inline-block;
+	float: right;
+	color:red;
+}

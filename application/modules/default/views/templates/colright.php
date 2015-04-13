@@ -1,0 +1,2 @@
+			<!--Colright-->
+            <div id="colright">

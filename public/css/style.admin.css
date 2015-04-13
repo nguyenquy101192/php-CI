@@ -1,0 +1,368 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    width: 100%;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    background-image: url("../images/icon/bg-body.png");
+}
+
+#wrapper{
+    margin: 0 auto;
+    width: 1280px;
+    background: #fff;
+}
+
+/*header*/
+#header-banner{
+    max-width: 100%;
+    max-height: 85px;
+    overflow:  hidden;
+}
+
+.header{
+    max-height: 50px;
+    overflow: hidden;
+    background-image: url(../images/icon/bg-header.png);
+    color: #f2f3f3;
+}
+
+#header-left{
+    float: left;
+    text-align: center;
+    font-size: 32px;
+    border-bottom-left-radius: 6px;
+    line-height: 50px;
+    padding: 0px 45px;
+}
+
+#header-left a{
+    text-decoration: none;
+    color: #f2f3f3;
+}
+
+#header-right{
+    float: right;
+    padding: 15px 45px;
+}
+
+#logout{
+    color: #ea7601;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#logout:hover{
+    color: blue;
+}
+
+/*Top menu*/
+.menu-top{
+    height: 35px;
+    padding: 0;
+    text-align: center;
+    border-left: 1px solid #bbb;
+    border-right: 1px solid #bbb;
+    background-image: url(../images/icon/bg-topmenu.png);
+}
+
+.menu-top ul{
+    max-height: 100%;
+    max-width: 100%;
+    list-style: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menu-top li{
+    float: left;
+    padding: 0px 5px 3px 0;
+    border-right: 1px solid #fff;
+}
+
+.menu-top li:last-of-type{
+    border: none;
+}
+
+.menu-top li:hover{
+    background: #dd6c0f;
+}
+
+.menu-top a{
+    line-height: 30px;
+    text-decoration: none;
+    color: #f2f3f3;
+    padding: 6px 0;
+}
+/*End top menu*/
+/*End header*/
+
+
+/*Main content*/
+.main-content{
+    clear: both;
+    padding: 20px 50px;
+}
+
+.title{
+    font-size: 32px;
+    color: #eb5e00;
+    font-weight: bold;
+}
+
+.content{
+    padding: 15px 0;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+div.search-bar{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+form{
+    margin: 0;
+    padding: 0;
+}
+
+#search-button{
+    height: 30px;
+    margin: 0;
+}
+
+input#search{
+    margin: 0;
+    padding: 0;
+    width: 220px;
+    height: 27px;
+}
+
+#select-pro{
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    height: 30px;
+}
+
+div.info-button{
+    clear: both;
+    padding: 5px 0;
+}
+
+div.count-record{
+    font-size: 16px;
+    padding: 5px 0;
+    float: left;
+}
+
+div.button{
+    float: right;
+    padding: 5px 0;
+}
+
+.table-center{
+    clear: both;
+    padding: 5px 0;
+    max-width: 100%;
+    overflow: hidden;
+}
+/*End main content*/
+
+/*Table*/
+.result-table{
+    border: 1px solid #bbb;
+    border-collapse: collapse;
+    min-width: 100%;
+}
+
+.title-table{
+    font-size: 18px;
+    font-weight: bold;
+    background-image: url(../images/icon/bg-table.png);
+    color: #ea7601;
+    height: 40px;
+    text-align: center;
+}
+
+.result-table a{
+    color: black;
+    text-decoration: none;
+}
+
+.result-table a:hover{
+    color: blue;
+}
+
+.result-table td{
+    padding: 10px 5px;
+    min-width: 35px;
+    max-width: 200px;
+    max-height: 100px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.result-table td.align{
+    text-align: center;
+}
+/*End table*/
+
+/*Form insert*/
+#insert{
+    width: 650px;
+}
+
+label{
+    font-weight: bold;
+    font-size: 16px;
+    width: 140px;
+    clear: both;
+    float: left;
+    line-height: 55px;
+}
+
+input[type=text], input[type=password]{
+    height: 35px;
+    width: 200px;
+    margin: 10px 0;
+}
+
+input[type=radio]{
+    margin: 15px 0px;
+}
+
+input[type=submit]{
+    padding: 5px 15px;
+    font-weight: bold;
+    border: 1px solid #fc9b35;
+    background-image: url(../images/icon/button-insert.png);
+    color: #fff;
+}
+
+span.error{
+    color: red;
+    float: right;
+    padding: 5px 0;
+}
+
+select{
+    padding: 4px 0px;
+    width: 200px;
+    margin: 10px 0;
+}
+
+.config-per-page{
+	width: 50px;
+}
+
+.insert{
+    text-decoration: none;
+    border: 1px solid #fc9b35;
+    font-weight: bold;
+    background-image: url(../images/icon/button-insert.png);
+    height: 25px;
+    color: #fff;
+    margin: 0 0 0 10px;
+}
+
+.pagination{
+    font-size: 16px;
+    width: 300px;
+    float: left;
+    padding: 15px 0;
+}
+
+.pagination a{
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+}
+/*fieldset customer information*/
+fieldset#customer-info{
+    margin: 0;
+    width: 350px;
+    min-height: 160px;
+    padding: 20px;
+    float: left;
+    position: relative;
+}
+
+fieldset#customer-info legend{
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+fieldset#customer-info table{
+    width: 350px;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+fieldset#customer-info table tr{
+    height: 30px;
+}
+
+fieldset#customer-info table th{
+    margin: 0;
+    padding: 0;
+    line-height: 30px;
+    text-align: left;
+}
+
+fieldset#customer-info table td{
+    width: 150px;
+    text-align: center;
+}
+/*end fieldset customer information*/
+
+/*fieldset order details*/
+fieldset#order-details{
+    margin: 0;
+    width: 700px;
+    min-height: 160px;
+    padding: 20px;
+    float: right;
+}
+
+fieldset#order-details legend{
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+fieldset#order-details table{
+    width: 700px;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+fieldset#order-details table tr{
+    height: 30px;
+}
+
+fieldset#order-details table th{
+    margin: 0;
+    padding: 0;
+    width: 50px;
+    line-height: 30px;
+}
+
+fieldset#order-details table td{
+    border-bottom: 1px solid #c7c0d2;
+    text-align: center;
+}
+
+/*Footer*/
+#footer{
+    background-image: url("../images/icon/bg-header.png");
+    height: 50px;
+}
