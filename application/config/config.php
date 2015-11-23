@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/FR06/Mock/';
+$config['base_url']	= 'http://project.dev/';
 
 /*
 |--------------------------------------------------------------------------

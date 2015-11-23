@@ -1,0 +1,1 @@
+Change base_url at /application/config/config.php (ex: $config['base_url'] = 'http://project.dev/';)

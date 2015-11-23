@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
@@ -10,27 +10,27 @@ body {
     background-image: url("../images/icon/bg-body.png");
 }
 
-#wrapper{
+#wrapper {
     margin: 0 auto;
     width: 1280px;
     background: #fff;
 }
 
 /*header*/
-#header-banner{
+#header-banner {
     max-width: 100%;
     max-height: 85px;
-    overflow:  hidden;
+    overflow: hidden;
 }
 
-.header{
+.header {
     max-height: 50px;
     overflow: hidden;
     background-image: url(../images/icon/bg-header.png);
     color: #f2f3f3;
 }
 
-#header-left{
+#header-left {
     float: left;
     text-align: center;
     font-size: 32px;
@@ -39,28 +39,28 @@ body {
     padding: 0px 45px;
 }
 
-#header-left a{
+#header-left a {
     text-decoration: none;
     color: #f2f3f3;
 }
 
-#header-right{
+#header-right {
     float: right;
     padding: 15px 45px;
 }
 
-#logout{
+#logout {
     color: #ea7601;
     text-decoration: none;
     font-size: 20px;
 }
 
-#logout:hover{
+#logout:hover {
     color: blue;
 }
 
 /*Top menu*/
-.menu-top{
+.menu-top {
     height: 35px;
     padding: 0;
     text-align: center;
@@ -69,7 +69,7 @@ body {
     background-image: url(../images/icon/bg-topmenu.png);
 }
 
-.menu-top ul{
+.menu-top ul {
     max-height: 100%;
     max-width: 100%;
     list-style: none;
@@ -79,110 +79,111 @@ body {
     overflow: hidden;
 }
 
-.menu-top li{
+.menu-top li {
     float: left;
     padding: 0px 5px 3px 0;
     border-right: 1px solid #fff;
 }
 
-.menu-top li:last-of-type{
+.menu-top li:last-of-type {
     border: none;
 }
 
-.menu-top li:hover{
+.menu-top li:hover {
     background: #dd6c0f;
 }
 
-.menu-top a{
+.menu-top a {
     line-height: 30px;
     text-decoration: none;
     color: #f2f3f3;
     padding: 6px 0;
 }
+
 /*End top menu*/
 /*End header*/
 
-
 /*Main content*/
-.main-content{
+.main-content {
     clear: both;
     padding: 20px 50px;
 }
 
-.title{
+.title {
     font-size: 32px;
     color: #eb5e00;
     font-weight: bold;
 }
 
-.content{
+.content {
     padding: 15px 0;
     max-width: 100%;
     overflow: hidden;
 }
 
-div.search-bar{
+div.search-bar {
     margin: 0;
     padding: 0;
     text-align: center;
 }
 
-form{
+form {
     margin: 0;
     padding: 0;
 }
 
-#search-button{
+#search-button {
     height: 30px;
     margin: 0;
 }
 
-input#search{
+input#search {
     margin: 0;
     padding: 0;
     width: 220px;
     height: 27px;
 }
 
-#select-pro{
+#select-pro {
     margin: 0;
     padding: 0;
     width: 150px;
     height: 30px;
 }
 
-div.info-button{
+div.info-button {
     clear: both;
     padding: 5px 0;
 }
 
-div.count-record{
+div.count-record {
     font-size: 16px;
     padding: 5px 0;
     float: left;
 }
 
-div.button{
+div.button {
     float: right;
     padding: 5px 0;
 }
 
-.table-center{
+.table-center {
     clear: both;
     padding: 5px 0;
     max-width: 100%;
     overflow: hidden;
 }
+
 /*End main content*/
 
 /*Table*/
-.result-table{
+.result-table {
     border: 1px solid #bbb;
     border-collapse: collapse;
     min-width: 100%;
 }
 
-.title-table{
+.title-table {
     font-size: 18px;
     font-weight: bold;
     background-image: url(../images/icon/bg-table.png);
@@ -191,16 +192,16 @@ div.button{
     text-align: center;
 }
 
-.result-table a{
+.result-table a {
     color: black;
     text-decoration: none;
 }
 
-.result-table a:hover{
+.result-table a:hover {
     color: blue;
 }
 
-.result-table td{
+.result-table td {
     padding: 10px 5px;
     min-width: 35px;
     max-width: 200px;
@@ -210,17 +211,18 @@ div.button{
     overflow: hidden;
 }
 
-.result-table td.align{
+.result-table td.align {
     text-align: center;
 }
+
 /*End table*/
 
 /*Form insert*/
-#insert{
+#insert {
     width: 650px;
 }
 
-label{
+label {
     font-weight: bold;
     font-size: 16px;
     width: 140px;
@@ -229,17 +231,17 @@ label{
     line-height: 55px;
 }
 
-input[type=text], input[type=password]{
+input[type=text], input[type=password] {
     height: 35px;
     width: 200px;
     margin: 10px 0;
 }
 
-input[type=radio]{
+input[type=radio] {
     margin: 15px 0px;
 }
 
-input[type=submit]{
+input[type=submit] {
     padding: 5px 15px;
     font-weight: bold;
     border: 1px solid #fc9b35;
@@ -247,23 +249,23 @@ input[type=submit]{
     color: #fff;
 }
 
-span.error{
+span.error {
     color: red;
     float: right;
     padding: 5px 0;
 }
 
-select{
+select {
     padding: 4px 0px;
     width: 200px;
     margin: 10px 0;
 }
 
-.config-per-page{
-	width: 50px;
+.config-per-page {
+    width: 50px;
 }
 
-.insert{
+.insert {
     text-decoration: none;
     border: 1px solid #fc9b35;
     font-weight: bold;
@@ -273,20 +275,21 @@ select{
     margin: 0 0 0 10px;
 }
 
-.pagination{
+.pagination {
     font-size: 16px;
     width: 300px;
     float: left;
     padding: 15px 0;
 }
 
-.pagination a{
+.pagination a {
     text-decoration: none;
     color: blue;
     font-weight: bold;
 }
+
 /*fieldset customer information*/
-fieldset#customer-info{
+fieldset#customer-info {
     margin: 0;
     width: 350px;
     min-height: 160px;
@@ -295,37 +298,38 @@ fieldset#customer-info{
     position: relative;
 }
 
-fieldset#customer-info legend{
+fieldset#customer-info legend {
     font-weight: bold;
     font-size: 20px;
     text-align: center;
 }
 
-fieldset#customer-info table{
+fieldset#customer-info table {
     width: 350px;
     margin-top: 20px;
     border-collapse: collapse;
 }
 
-fieldset#customer-info table tr{
+fieldset#customer-info table tr {
     height: 30px;
 }
 
-fieldset#customer-info table th{
+fieldset#customer-info table th {
     margin: 0;
     padding: 0;
     line-height: 30px;
     text-align: left;
 }
 
-fieldset#customer-info table td{
+fieldset#customer-info table td {
     width: 150px;
     text-align: center;
 }
+
 /*end fieldset customer information*/
 
 /*fieldset order details*/
-fieldset#order-details{
+fieldset#order-details {
     margin: 0;
     width: 700px;
     min-height: 160px;
@@ -333,36 +337,36 @@ fieldset#order-details{
     float: right;
 }
 
-fieldset#order-details legend{
+fieldset#order-details legend {
     font-weight: bold;
     font-size: 20px;
     text-align: center;
 }
 
-fieldset#order-details table{
+fieldset#order-details table {
     width: 700px;
     margin-top: 20px;
     border-collapse: collapse;
 }
 
-fieldset#order-details table tr{
+fieldset#order-details table tr {
     height: 30px;
 }
 
-fieldset#order-details table th{
+fieldset#order-details table th {
     margin: 0;
     padding: 0;
     width: 50px;
     line-height: 30px;
 }
 
-fieldset#order-details table td{
+fieldset#order-details table td {
     border-bottom: 1px solid #c7c0d2;
     text-align: center;
 }
 
 /*Footer*/
-#footer{
+#footer {
     background-image: url("../images/icon/bg-header.png");
     height: 50px;
 }

@@ -1,6 +1,6 @@
 ﻿/*! RateIt | v1.0.22 / 05/27/2014 | https://rateit.codeplex.com/license
-    http://rateit.codeplex.com | Twitter: @gjunge
-*/
+ http://rateit.codeplex.com | Twitter: @gjunge
+ */
 (function ($) {
     $.rateit = {
         aria: {
@@ -12,12 +12,15 @@
     $.fn.rateit = function (p1, p2) {
         //quick way out.
         var index = 1;
-        var options = {}; var mode = 'init';
+        var options = {};
+        var mode = 'init';
         var capitaliseFirstLetter = function (string) {
             return string.charAt(0).toUpperCase() + string.substr(1);
         };
 
-        if (this.length === 0) { return this; }
+        if (this.length === 0) {
+            return this;
+        }
 
 
         var tp1 = $.type(p1);
@@ -63,21 +66,31 @@
                     var fld = $(itemdata('backingfld'));
                     fld.val(itemdata('value'));
                     fld.trigger('change');
-                    if (fld[0].min) { fld[0].min = itemdata('min'); }
-                    if (fld[0].max) { fld[0].max = itemdata('max'); }
-                    if (fld[0].step) { fld[0].step = itemdata('step'); }
+                    if (fld[0].min) {
+                        fld[0].min = itemdata('min');
+                    }
+                    if (fld[0].max) {
+                        fld[0].max = itemdata('max');
+                    }
+                    if (fld[0].step) {
+                        fld[0].step = itemdata('step');
+                    }
                 }
                 item.trigger('reset');
             }
 
             //add the rate it class.
-            if (!item.hasClass('rateit')) { item.addClass('rateit'); }
+            if (!item.hasClass('rateit')) {
+                item.addClass('rateit');
+            }
 
             var ltr = item.css('direction') != 'rtl';
 
             // set value mode
             if (mode == 'setvalue') {
-                if (!itemdata('init')) { throw 'Can\'t set value before init'; }
+                if (!itemdata('init')) {
+                    throw 'Can\'t set value before init';
+                }
 
 
                 //if readonly now and it wasn't readonly, remove the eventhandlers.
@@ -94,10 +107,18 @@
                     //In case of input[type=range], although we did read its attributes even in browsers that don't support it (using fld.attr())
                     //we only update it in browser that support it (&& fld[0].min only works in supporting browsers), not only does it save us from checking if it is range input type, it also is unnecessary.
                     var fld = $(itemdata('backingfld'));
-                    if (p1 == 'value') { fld.val(p2); }
-                    if (p1 == 'min' && fld[0].min) { fld[0].min = p2; }
-                    if (p1 == 'max' && fld[0].max) { fld[0].max = p2;}
-                    if (p1 == 'step' && fld[0].step) { fld[0].step = p2; }
+                    if (p1 == 'value') {
+                        fld.val(p2);
+                    }
+                    if (p1 == 'min' && fld[0].min) {
+                        fld[0].min = p2;
+                    }
+                    if (p1 == 'max' && fld[0].max) {
+                        fld[0].max = p2;
+                    }
+                    if (p1 == 'step' && fld[0].step) {
+                        fld[0].step = p2;
+                    }
                 }
 
                 itemdata(p1, p2);
@@ -193,7 +214,7 @@
             //setup the reset button
             var resetbtn = item.find('.rateit-reset');
             if (resetbtn.data('wired') !== true) {
-                resetbtn.bind('click', function (e) {
+                resetbtn.bind('click',function (e) {
                     e.preventDefault();
 
                     resetbtn.blur();
@@ -215,9 +236,16 @@
                 var pageX = (event.changedTouches) ? event.changedTouches[0].pageX : event.pageX;
 
                 var offsetx = pageX - $(element).offset().left;
-                if (!ltr) { offsetx = range.width() - offsetx };
-                if (offsetx > range.width()) { offsetx = range.width(); }
-                if (offsetx < 0) { offsetx = 0; }
+                if (!ltr) {
+                    offsetx = range.width() - offsetx
+                }
+                ;
+                if (offsetx > range.width()) {
+                    offsetx = range.width();
+                }
+                if (offsetx < 0) {
+                    offsetx = 0;
+                }
 
                 return score = Math.ceil(offsetx / itemdata('starwidth') * (1 / itemdata('step')));
             };
@@ -312,19 +340,24 @@
     function touchHandler(event) {
 
         var touches = event.originalEvent.changedTouches,
-                first = touches[0],
-                type = "";
+            first = touches[0],
+            type = "";
         switch (event.type) {
-            case "touchmove": type = "mousemove"; break;
-            case "touchend": type = "mouseup"; break;
-            default: return;
+            case "touchmove":
+                type = "mousemove";
+                break;
+            case "touchend":
+                type = "mouseup";
+                break;
+            default:
+                return;
         }
 
         var simulatedEvent = document.createEvent("MouseEvent");
         simulatedEvent.initMouseEvent(type, true, true, window, 1,
-                              first.screenX, first.screenY,
-                              first.clientX, first.clientY, false,
-                              false, false, false, 0/*left*/, null);
+            first.screenX, first.screenY,
+            first.clientX, first.clientY, false,
+            false, false, false, 0/*left*/, null);
 
         first.target.dispatchEvent(simulatedEvent);
         event.preventDefault();
@@ -334,6 +367,8 @@
     $.fn.rateit.defaults = { min: 0, max: 5, step: 0.5, starwidth: 16, starheight: 16, readonly: false, resetable: true, ispreset: false };
 
     //invoke it on all .rateit elements. This could be removed if not wanted.
-    $(function () { $('div.rateit, span.rateit').rateit(); });
+    $(function () {
+        $('div.rateit, span.rateit').rateit();
+    });
 
 })(jQuery);

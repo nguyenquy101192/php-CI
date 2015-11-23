@@ -2,32 +2,32 @@
 /// <reference path="Jssor.Utils.js" />
 
 /*
-* Jssor.Slider 17.0
-* http://www.jssor.com/
-* 
-* TERMS OF USE - Jssor.Slider
-* 
-* Copyright 2014 Jssor
-*
-* Permission is hereby granted, free of charge, to any person obtaining
-* a copy of this software and associated documentation files (the
-* "Software"), to deal in the Software without restriction, including
-* without limitation the rights to use, copy, modify, merge, publish,
-* distribute, sublicense, and/or sell copies of the Software, and to
-* permit persons to whom the Software is furnished to do so, subject to
-* the following conditions:
-* 
-* The above copyright notice and this permission notice shall be
-* included in all copies or substantial portions of the Software.
-* 
-* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-* EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-* MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-* NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
-* LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
-* OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-* WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-*/
+ * Jssor.Slider 17.0
+ * http://www.jssor.com/
+ *
+ * TERMS OF USE - Jssor.Slider
+ *
+ * Copyright 2014 Jssor
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining
+ * a copy of this software and associated documentation files (the
+ * "Software"), to deal in the Software without restriction, including
+ * without limitation the rights to use, copy, modify, merge, publish,
+ * distribute, sublicense, and/or sell copies of the Software, and to
+ * permit persons to whom the Software is furnished to do so, subject to
+ * the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+ * LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+ * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+ * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
 
 var $JssorSlider$;
 var $JssorSlideshowFormations$ = window.$JssorSlideshowFormations$ = {};
@@ -450,7 +450,9 @@ new function () {
                             C++;
                             break;
                         case ASSEMBLY_LEFT_BOTTOM:
-                        case ASSEMBLY_RIGHT_TOP: R = rl; C--;
+                        case ASSEMBLY_RIGHT_TOP:
+                            R = rl;
+                            C--;
                             break;
                         case ASSEMBLY_RIGHT_BOTTOM:
                         case ASSEMBLY_LEFT_TOP:
@@ -1181,6 +1183,7 @@ new function () {
                 });
             }
         }
+
         //Carousel
 
         //Slideshow
@@ -1199,6 +1202,7 @@ new function () {
                 });
             }
         }
+
         //Slideshow
 
         //CarouselPlayer
@@ -1288,6 +1292,7 @@ new function () {
                 _Conveyor.$Combine(slideshow);
             }
         }
+
         //CarouselPlayer
 
         //SlideContainer
@@ -1309,6 +1314,7 @@ new function () {
                 $JssorUtils$.$ClearInnerHtml(elmt);
             };
         }
+
         //SlideContainer
 
         //SlideItem
@@ -1761,6 +1767,7 @@ new function () {
                 });
             }
         }
+
         //SlideItem
 
         //Processor
@@ -1924,6 +1931,7 @@ new function () {
                 _ProgressEnd = _SelfProcessor.$GetPosition_OuterEnd();
             }
         }
+
         //Processor
         //private classes
 
@@ -2145,6 +2153,7 @@ new function () {
                 }
             }
         }
+
         //Event handling end
 
         function SetCurrentSlideIndex(index) {
@@ -2631,7 +2640,7 @@ new function () {
             $AutoPlaySteps: 1,              //[Optional] Steps to go of every play (this options applys only when slideshow disabled), default value is 1
             $AutoPlayInterval: 3000,        //[Optional] Interval to play next slide since the previous stopped if a slideshow is auto playing, default value is 3000
             $PauseOnHover: 1,               //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, default value is 1
-            
+
             $SlideDuration: 500,            //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 400
             $SlideEasing: $JssorEasing$.$EaseOutQuad,   //[Optional] Specifies easing for right to left animation, default value is $JssorEasing$.$EaseOutQuad
             $MinDragOffsetToSlide: 20,      //[Optional] Minimum drag offset that trigger slide, default value is 20
@@ -2647,16 +2656,16 @@ new function () {
         //Sodo statement for development time intellisence only
         $JssorDebug$.$Execute(function () {
             _Options = $JssorUtils$.$Extend({
-                $ArrowKeyNavigation: undefined,
-                $SlideWidth: undefined,
-                $SlideHeight: undefined,
-                $SlideshowOptions: undefined,
-                $CaptionSliderOptions: undefined,
-                $BulletNavigatorOptions: undefined,
-                $ArrowNavigatorOptions: undefined,
-                $ThumbnailNavigatorOptions: undefined
-            },
-            _Options);
+                    $ArrowKeyNavigation: undefined,
+                    $SlideWidth: undefined,
+                    $SlideHeight: undefined,
+                    $SlideshowOptions: undefined,
+                    $CaptionSliderOptions: undefined,
+                    $BulletNavigatorOptions: undefined,
+                    $ArrowNavigatorOptions: undefined,
+                    $ThumbnailNavigatorOptions: undefined
+                },
+                _Options);
         });
 
         var _PlayOrientation = _Options.$PlayOrientation & 3;
@@ -3039,6 +3048,7 @@ new function () {
             _CarouselPlayer.$PlayCarousel(startPosition, startPosition, 0);
         }
     }
+
     //Jssor Slider
 
     //JssorSlider.$ASSEMBLY_BOTTOM_LEFT = ASSEMBLY_BOTTOM_LEFT;
@@ -3160,7 +3170,7 @@ var $JssorBulletNavigator$ = window.$JssorBulletNavigator$ = function (elmt, opt
             if (_Options.$AutoCenter & 2) {
                 $JssorUtils$.$CssTop(elmt, ($JssorUtils$.$CssHeight($JssorUtils$.$GetParentNode(elmt)) - _Height) / 2);
             }
-            
+
             _Located = true;
         }
     };
@@ -3854,7 +3864,7 @@ var $JssorCaptionSlider$ = window.$JssorCaptionSlider$ = function (container, ca
             toStyles.$Rotate = rotate * 360;
             fromStyles.$Rotate = 0;
         }
-            //Clip
+        //Clip
         else if (transition.$Clip) {
             var fromStyleClip = { $Top: 0, $Right: captionItemWidth, $Bottom: captionItemHeight, $Left: 0 };
             var toStyleClip = $JssorUtils$.$Extend({}, fromStyleClip);

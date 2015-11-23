@@ -1,4 +1,3 @@
-var url="http://localhost/FR06/Mock/";
 function openFancybox() {
     setTimeout(function () {
         $('#lightbox').trigger('click');
@@ -16,7 +15,7 @@ $(document).ready(function () {
     });
     $("#lightbox").click(function () {
         $.fancybox({
-            href: url+"public/images/lightbox.jpg",
+            href: base_url + "public/images/lightbox.jpg",
             type: "image"
         });
         return false;

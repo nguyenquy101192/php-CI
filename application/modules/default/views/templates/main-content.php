@@ -1,2 +1,2 @@
-		<!--Main content-->
-        <div id="main-content">
+<!--Main content-->
+<div id="main-content">

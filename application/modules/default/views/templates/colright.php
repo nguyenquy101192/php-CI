@@ -1,2 +1,2 @@
-			<!--Colright-->
-            <div id="colright">
+<!--Colright-->
+<div id="colright">

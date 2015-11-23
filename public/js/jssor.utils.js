@@ -1,32 +1,32 @@
 ﻿/// <reference path="Jssor.Core.js" />
 
 /*
-* Jssor.Utils 17.0
-* http://www.jssor.com/
-* 
-* TERMS OF USE - Jssor.Utils
-* 
-* Copyright 2014 Jssor
-*
-* Permission is hereby granted, free of charge, to any person obtaining
-* a copy of this software and associated documentation files (the
-* "Software"), to deal in the Software without restriction, including
-* without limitation the rights to use, copy, modify, merge, publish,
-* distribute, sublicense, and/or sell copies of the Software, and to
-* permit persons to whom the Software is furnished to do so, subject to
-* the following conditions:
-* 
-* The above copyright notice and this permission notice shall be
-* included in all copies or substantial portions of the Software.
-* 
-* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-* EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-* MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-* NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
-* LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
-* OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-* WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-*/
+ * Jssor.Utils 17.0
+ * http://www.jssor.com/
+ *
+ * TERMS OF USE - Jssor.Utils
+ *
+ * Copyright 2014 Jssor
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining
+ * a copy of this software and associated documentation files (the
+ * "Software"), to deal in the Software without restriction, including
+ * without limitation the rights to use, copy, modify, merge, publish,
+ * distribute, sublicense, and/or sell copies of the Software, and to
+ * permit persons to whom the Software is furnished to do so, subject to
+ * the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+ * LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+ * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+ * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
 
 
 //$JssorPoint$
@@ -69,7 +69,7 @@ var $JssorPoint$;
 
     SDPointPrototype.$DistanceTo = function (point) {
         return Math.sqrt(Math.pow(this.x - point.x, 2) +
-                        Math.pow(this.y - point.y, 2));
+            Math.pow(this.y - point.y, 2));
     };
 
     SDPointPrototype.$Apply = function (func) {
@@ -78,7 +78,7 @@ var $JssorPoint$;
 
     SDPointPrototype.$Equals = function (point) {
         return (point instanceof $JssorPoint$) &&
-                (this.x === point.x) && (this.y === point.y);
+            (this.x === point.x) && (this.y === point.y);
     };
 
     SDPointPrototype.$ToString = function () {
@@ -368,8 +368,7 @@ var $JssorUtils$ = window.$JssorUtils$ = new function () {
 
     function DetectBrowser() {
         if (!browser) {
-            if (app == "Microsoft Internet Explorer" &&
-                !!window.attachEvent && !!window.ActiveXObject) {
+            if (app == "Microsoft Internet Explorer" && !!window.attachEvent && !!window.ActiveXObject) {
 
                 var ieOffset = ua.indexOf("MSIE");
                 browser = $JssorBrowser$.$IE;
@@ -377,8 +376,8 @@ var $JssorUtils$ = window.$JssorUtils$ = new function () {
 
                 //check IE javascript version
                 /*@cc_on
-                browserJavascriptVersion = @_jscript_version;
-                @*/
+                 browserJavascriptVersion = @_jscript_version;
+                 @*/
 
                 // update: for intranet sites and compat view list sites, IE sends
                 // an IE7 User-Agent to the server to be interoperable, and even if
@@ -467,6 +466,7 @@ var $JssorUtils$ = window.$JssorUtils$ = new function () {
     }
 
     var _TransformProperty;
+
     function GetTransformProperty(elmt) {
 
         if (!_TransformProperty) {
@@ -569,9 +569,7 @@ var $JssorUtils$ = window.$JssorUtils$ = new function () {
 
         try {
             // Not own constructor property must be Object
-            if (obj.constructor &&
-				!hasOwn.call(obj, "constructor") &&
-				!hasOwn.call(obj.constructor.prototype, "isPrototypeOf")) {
+            if (obj.constructor && !hasOwn.call(obj, "constructor") && !hasOwn.call(obj.constructor.prototype, "isPrototypeOf")) {
                 return false;
             }
         } catch (e) {
@@ -583,7 +581,8 @@ var $JssorUtils$ = window.$JssorUtils$ = new function () {
         // if last one is own, then all properties are own.
 
         var key;
-        for (key in obj) { }
+        for (key in obj) {
+        }
 
         return key === undefined || hasOwn.call(obj, key);
     }
@@ -737,7 +736,7 @@ var $JssorUtils$ = window.$JssorUtils$ = new function () {
         // http://www.quirksmode.org/js/events_properties.html
 
         if (event.type == "DOMMouseScroll" &&
-                IsBrowserFireFox() && browserRuntimeVersion < 3) {
+            IsBrowserFireFox() && browserRuntimeVersion < 3) {
             // hack for FF2 which reports incorrect position for mouse scroll
             result.x = event.screenX;
             result.y = event.screenY;
@@ -920,7 +919,7 @@ var $JssorUtils$ = window.$JssorUtils$ = new function () {
             var style = elmt.currentStyle || elmt.style;
             value = style[name];
 
-            if(value == "" && window.getComputedStyle) {
+            if (value == "" && window.getComputedStyle) {
                 style = elmt.ownerDocument.defaultView.getComputedStyle(elmt, null);
 
                 style && (value = style.getPropertyValue(name) || style[name]);
@@ -1025,7 +1024,7 @@ var $JssorUtils$ = window.$JssorUtils$ = new function () {
             SetStyleFilterIE(elmt, newFilterValue);
         }
 
-            //if (!IsBrowserIE() || browserEngineVersion >= 9) 
+        //if (!IsBrowserIE() || browserEngineVersion >= 9)
         else {
             elmt.style.opacity = opacity == 1 ? "" : Math.round(opacity * 100) / 100;
         }
@@ -1553,7 +1552,8 @@ var $JssorUtils$ = window.$JssorUtils$ = new function () {
         return doc.createElement(tagName);
     };
 
-    self.$EmptyFunction = function () { };
+    self.$EmptyFunction = function () {
+    };
 
     self.$GetAttribute = function (elmt, name) {
         return elmt.getAttribute(name);
@@ -1756,6 +1756,7 @@ var $JssorUtils$ = window.$JssorUtils$ = new function () {
 
     var _MouseDownButtons;
     var _MouseOverButtons = [];
+
     function JssorButtonEx(elmt) {
         var _Self = this;
 
@@ -1991,11 +1992,17 @@ var $JssorUtils$ = window.$JssorUtils$ = new function () {
         };
 
         _This.$ScaleXY = function (matrix, sx, sy) {
-            return Multiply(matrix, [[sx, 0], [0, sy]]);
+            return Multiply(matrix, [
+                [sx, 0],
+                [0, sy]
+            ]);
         };
 
         _This.$TransformPoint = function (matrix, p) {
-            var pMatrix = Multiply(matrix, [[p.x], [p.y]]);
+            var pMatrix = Multiply(matrix, [
+                [p.x],
+                [p.y]
+            ]);
 
             return new $JssorPoint$(pMatrix[0][0], pMatrix[1][0]);
         };
@@ -2014,7 +2021,10 @@ var $JssorUtils$ = window.$JssorUtils$ = new function () {
         //var m21 = sin * scaleX;
         //var m22 = cos * scaleY;
 
-        return [[cos * scaleX, -sin * scaleY], [sin * scaleX, cos * scaleY]];
+        return [
+            [cos * scaleX, -sin * scaleY],
+            [sin * scaleX, cos * scaleY]
+        ];
     };
 
     self.$GetMatrixOffset = function (matrix, width, height) {
